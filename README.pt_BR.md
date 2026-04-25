@@ -1,13 +1,108 @@
 <!-- l10n-sync: source-file="README.md" -->
-# Soc Ops
+🌐 [Español](README.es.md) | [English](README.md)
 
-Jogo de Social Bingo para encontros presenciais. Encontre pessoas que correspondam às perguntas e consiga 5 em uma fileira!
+# 🎯 Soc Ops — Social Bingo
 
-🎮 **[Jogar](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/)** • 📚 **[Ver Guia do Lab](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/)**
+> **Quebre o gelo, faça conexões, vença no networking!**
+
+Soc Ops é um jogo interativo de bingo social projetado para encontros presenciais, eventos de equipe e conferências. Encontre pessoas que correspondam às perguntas, marque seu cartão e corra para conseguir 5 em uma fileira!
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2c6d0c33-72ec-47e8-b6bc-20837e7d830b" alt="Tela Inicial" width="300" />
+  <img src="https://github.com/user-attachments/assets/4785afd4-c22a-4b1c-9b78-64d426c599e9" alt="Tabuleiro do Jogo" width="300" />
+</p>
+
+<p align="center">
+  🎮 <a href="https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/"><strong>Jogar</strong></a> &nbsp;•&nbsp;
+  📚 <a href="https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/"><strong>Ver Guia do Lab</strong></a>
+</p>
+
+---
+
+## ✨ Funcionalidades
+
+- 🎲 **Tabuleiros aleatórios** — Cada jogador recebe uma disposição única
+- 💾 **Salvamento automático** — Continue de onde parou
+- 🏆 **Detecção de Bingo** — Detecção automática de vitória em linhas, colunas e diagonais
+- 🎉 **Modal de celebração** — Tela de vitória com confete
+- 📱 **Mobile-first** — Funciona perfeitamente em celulares durante eventos
+
+---
+
+## 🚀 Início Rápido
+
+### Pré-requisitos
+- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) ou superior
+
+### Executar Localmente
+```bash
+cd SocOps
+dotnet run
+# Abrir http://localhost:5166
+```
+
+### Abrir no GitHub Codespaces (opcional)
+
+Após criar seu próprio repositório a partir deste template:
+
+1. Abra seu repositório no GitHub
+2. Clique em **Code** → **Codespaces** → **Create codespace on main**
+3. Aguarde a conclusão da configuração do devcontainer
+4. A partir da raiz do repositório, execute:
+   ```bash
+   cd SocOps
+   dotnet run
+   ```
+
+### Compilar
+```bash
+cd SocOps
+dotnet build
+```
+
+---
+
+## 🎨 Personalize seu Jogo
+
+### Alterar Perguntas
+Edite `SocOps/Data/Questions.cs` para adicionar suas próprias perguntas quebra-gelo:
+```csharp
+public static readonly List<string> QuestionsList = new()
+{
+    "tem um animal de estimação",
+    "fala mais de 2 idiomas",
+    "sua pergunta personalizada aqui",
+    // ... 24+ perguntas para um tabuleiro completo
+};
+```
+
+---
+
+## 🛠️ Stack Tecnológico
+
+- **Framework**: Blazor WebAssembly (.NET 10)
+- **Estilos**: Utilitários CSS personalizados (inspirados no Tailwind)
+- **Estado**: Serviços com persistência em localStorage
+- **Deploy**: GitHub Pages via Actions
+
+---
+
+## 📁 Estrutura do Projeto
+
+```
+SocOps/
+├── Components/     # BingoBoard, BingoSquare, Modais
+├── Models/         # Estado do jogo e modelos de dados
+├── Services/       # Lógica do jogo e gerenciamento de estado
+├── Data/           # Banco de perguntas
+└── wwwroot/        # Recursos estáticos
+```
 
 ---
 
 ## 📚 Guia do Lab
+
+Este repositório também é um workshop prático sobre agentes do GitHub Copilot. Siga os passos abaixo para construir o jogo com assistência de IA!
 
 | Parte | Título |
 |-------|--------|
@@ -21,22 +116,13 @@ Jogo de Social Bingo para encontros presenciais. Encontre pessoas que correspond
 
 ---
 
-## Pré-requisitos
+## 🚢 Deploy
 
-- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) ou superior
+O deploy é feito automaticamente no GitHub Pages ao fazer push para `main`:
+- Seu jogo: `https://{usuario}.github.io/{nome-repo}`
 
-## Executar
+---
 
-```bash
-cd SocOps
-dotnet run
-```
+## 📝 Licença
 
-## Compilar
-
-```bash
-cd SocOps
-dotnet build
-```
-
-O deploy é feito automaticamente no GitHub Pages ao fazer push para `main`.
+MIT — use para o seu próximo evento!
