@@ -1,21 +1,22 @@
-<div class="flex flex-col items-center justify-center min-h-full p-6 bg-gray-50">
-    <div class="text-center max-w-sm">
-        <h1 class="text-4xl font-bold text-gray-900 mb-2">Soc Ops</h1>
-        <p class="text-lg text-gray-600 mb-8">Social Bingo</p>
+<div class="theme-root screen-shell">
+    <div class="screen-panel text-center max-w-2xl stagger-in">
+        <p class="kicker stagger-in delay-1">Signal Control Room</p>
+        <h1 class="title-main stagger-in delay-1">SOC OPS</h1>
+        <p class="subtitle-main stagger-in delay-2">Social Bingo</p>
 
-        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 mb-8">
-            <h2 class="font-semibold text-gray-800 mb-3">How to play</h2>
-            <ul class="text-left text-gray-600 text-sm space-y-2">
-                <li>• Find people who match the questions</li>
-                <li>• Tap a square when you find a match</li>
-                <li>• Get 5 in a row to win!</li>
+        <div class="rules-panel text-left stagger-in delay-2">
+            <h2 class="font-semibold text-gray-900 mb-3">Mission Brief</h2>
+            <ul class="rules-list text-sm">
+                <li>Scan the room and identify people matching each prompt.</li>
+                <li>Mark a tile when you confirm a match.</li>
+                <li>Lock five tiles in a line to trigger BINGO.</li>
             </ul>
         </div>
 
         <button
             @onclick="OnStart"
-            class="w-full bg-accent text-white font-semibold py-4 px-8 rounded-lg text-lg active:bg-accent-light transition-colors">
-            Start Game
+            class="control-button text-lg stagger-in delay-3">
+            Launch Session
         </button>
     </div>
 </div>
